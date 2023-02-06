@@ -27,8 +27,6 @@ function validar_clave(codigo_pais, fecha, identif, consecutivo, situacion) {
         error = true;
     }
 
-    console.log(fecha)
-
     if (!isNumeric(fecha.substring(0,1)) | !isNumeric(fecha.substring(3,4)) | !isNumeric(fecha.substring(6,7))
         | fecha.charAt(2) != '/' | fecha.charAt(5) != '/') {
 
@@ -161,6 +159,7 @@ function test_print_clave(
     console.log("Codigo seguridad:\t" + codigo_seguridad);
     console.log("Tamano de clave:\t" + clave.length);
     console.log("\nClave generada:\t\t" + clave);
+    console.log("\n-------------------------------------------------------------------------------------\n")
 }
 
 function test_print_consecutivo(sucursal, punto_venta, tipo, numeracion, consecutivo){
@@ -171,10 +170,11 @@ function test_print_consecutivo(sucursal, punto_venta, tipo, numeracion, consecu
     console.log("Numeracion:\t\t" + numeracion);
     console.log("Tamano consecutivo:\t" + consecutivo.length);
     console.log("\nConsecutivo generado:\t" + consecutivo);
+    console.log("\n-------------------------------------------------------------------------------------\n")
 }
 
 /*  
-    Clave: lenght(20)
+    Consecutivo: lenght(20)
     A: Casa matriz, sucursales (3)
     B: Terminal o punto de venta (5)
     C: Tipo de comprobante o documento asociado (2)
@@ -197,7 +197,7 @@ function generar_consecutivo(sucursal, punto_venta, tipo, numeracion) {
         tipo.toString() +
         numeracion.toString();
 
-    test_print_consecutivo(sucursal, punto_venta, tipo, numeracion, consecutivo)
+    //test_print_consecutivo(sucursal, punto_venta, tipo, numeracion, consecutivo)
 
     return consecutivo;
 }
@@ -234,15 +234,15 @@ function generar_clave(codigo_pais, fecha, identif, consecutivo, situacion) {
         situacion.toString() +
         codigo_seguridad;
 
-    test_print_clave(
-        codigo_pais,
-        fecha_,
-        identif,
-        consecutivo,
-        situacion,
-        codigo_seguridad,
-        clave
-    );
+    // test_print_clave(
+    //     codigo_pais,
+    //     fecha_,
+    //     identif,
+    //     consecutivo,
+    //     situacion,
+    //     codigo_seguridad,
+    //     clave
+    // );
 
     return clave;
 }

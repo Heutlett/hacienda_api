@@ -5,6 +5,8 @@ const claveController = require('../../controllers/claveController/claveControll
 const router = express.Router();
 
 router.get('/hola', claveController.getHola);
+router.get('/generarClaveConsecutivo', claveController.generarClaveConsecutivo);
+router.get('/generarConsecutivo', claveController.generarConsecutivo);
 router.get('/generarClave', claveController.generarClave);
 
 module.exports = {
