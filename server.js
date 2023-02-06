@@ -5,6 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const claveRoutes = require('./routes/claveRoutes/claveRoutes')
+const genXmlRoutes = require('./routes/genXmlRoutes/genXmlRoutes')
 
 const app = express();
 
@@ -12,5 +13,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api',claveRoutes.routes);
+app.use('/api',genXmlRoutes.routes);
 
 module.exports = app;
