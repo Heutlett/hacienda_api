@@ -3,11 +3,11 @@ const userData = require("../../data/userData/userData");
 
 async function getUsuarios() {
 
-    let resp = await userData.getAllUsers();
+    return await userData.getAllUsers();
+}
 
-    //console.log(resp);
-
-    return resp;
+async function getUsuarioByNombreUsuario(nombre_usuario){
+    return await userData.getUsuarioByNombreUsuario(nombre_usuario);
 }
 
 async function registrarUsuario(
@@ -18,7 +18,7 @@ async function registrarUsuario(
     pinp12,
     correo
 ) {
-    return userData.crearUsuario(
+    return await userData.crearUsuario(
         nombre_usuario,
         password,
         rol,
@@ -31,4 +31,5 @@ async function registrarUsuario(
 module.exports = {
     getUsuarios,
     registrarUsuario,
+    getUsuarioByNombreUsuario
 };

@@ -20,9 +20,6 @@ async function getAllUsers() {
         const resp = await (async () => {
             try {
                 const rows = await query(sql_query);
-                console.log(
-                    "\nSe ha ejecutado el query getAllUsers correctamente.\n"
-                );
                 return rows;
             } finally {
                 connection.end();
@@ -44,9 +41,9 @@ async function crearUsuario(
     correo
 ) {
     try {
-        const exists = await getUsuarioByNombreUsuario(nombre_usuario);
+        const user = await getUsuarioByNombreUsuario(nombre_usuario);
 
-        if (!exists) {
+        if (user.length == 0) {
             const connection = mysql.createConnection(config.sql);
 
             const query = util.promisify(connection.query).bind(connection);
@@ -56,14 +53,7 @@ async function crearUsuario(
             const resp = await (async () => {
                 try {
                     await query(sql_query);
-                    console.log(
-                        "\nSe ha ejecutado el query crearUsuario correctamente.\n"
-                    );
-                    return (
-                        "Se ha insertado el usuario " +
-                        nombre_usuario +
-                        " correctamente."
-                    );
+                    return 1
                 } finally {
                     connection.end();
                 }
@@ -71,7 +61,7 @@ async function crearUsuario(
 
             return resp;
         }
-        return "Error, el nombre de usuario ya esta siendo utilizado."
+        return 2 //Error, el nombre de usuario ya esta siendo utilizado
 
     } catch (error) {
         throw new Error(error.message);
@@ -89,7 +79,7 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
         const resp = await (async () => {
             try {
                 const row = await query(sql_query);
-                return row.length;
+                return row;
             } finally {
                 connection.end();
             }
@@ -104,4 +94,5 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
 module.exports = {
     crearUsuario,
     getAllUsers,
+    getUsuarioByNombreUsuario
 };
