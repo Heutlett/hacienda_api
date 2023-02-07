@@ -1,0 +1,8 @@
+mysql:
+
+mysql -u root -p
+
+contraseña
+Helado19921
+
+SHOW TABLES;

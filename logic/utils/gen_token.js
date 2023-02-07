@@ -1,15 +1,13 @@
 const axios = require("axios");
 const qs = require("querystring");
 
-async function getToken() {
-
-    
+async function getToken(_client_id, _username, _password, _grant_type) {
 
     const requestBody = {
-        client_id: "api-stag",
-        username: "cpf-06-0453-0340@stag.comprobanteselectronicos.go.cr",
-        password: "I7rT>^!5mR^!eS>=mkVB",
-        grant_type: "password",
+        client_id: _client_id,
+        username: _username,
+        password: _password,
+        grant_type: _grant_type,
     };
 
     const config = {
@@ -18,19 +16,19 @@ async function getToken() {
         },
     };
 
-    let token = await axios
+    let result = await axios
         .post("https://idp.comprobanteselectronicos.go.cr/auth/realms/rut-stag/protocol/openid-connect/token", qs.stringify(requestBody), config)
         .then((result) => {
-            //console.log("\n\naccess_token:\n" + result.data.access_token)
-            //console.log("\n-------------------------------------------------------------------------------------\n")
-            return result.data.access_token
+            return { access_token: result.data.access_token, refresh_token: result.data.refresh_token}
         })
         .catch((err) => {
             return "Ha ocurrido un error: " + err
         });
     
+    //console.log(result)
+    
 
-    return token
+    return result
 }
 
 module.exports = { getToken };

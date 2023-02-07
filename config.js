@@ -17,16 +17,17 @@ module.exports = {
     host: HOST,
     url: HOST_URL,
     sql:{
+        host: HOST,
         user: SQL_USER,
         password: SQL_PASSWORD,
-        server: SQL_SERVER,
+        //server: SQL_SERVER,
         database: SQL_DATABASE,
-        options:{
-                trustServerCertificate:true,
-                trustedConnection:false,
-                enableArithAbort: true,
-                instancename:SQL_INSTANCENAME
-                },
-        port: 1433,
+        //options:{
+        //        trustServerCertificate:true,
+        //        trustedConnection:false,
+        //        enableArithAbort: true,
+        //        instancename:SQL_INSTANCENAME
+        //        },
+        //port: 1433,
         }
 }
