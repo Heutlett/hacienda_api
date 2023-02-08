@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TiqueteElectronico xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico TiqueteElectronico_V4.3.xsd">
+    <Clave>50607022300310273999900100001040005663704112345678</Clave>
+    <CodigoActividad>602301</CodigoActividad>
+    <NumeroConsecutivo>00100001040005663704</NumeroConsecutivo>
+    <FechaEmision>2023-02-07T22:11:17</FechaEmision>
+    <Emisor>
+        <Nombre>DELIVERY HERO COSTA RICA LIMITADA</Nombre>
+        <Identificacion>
+            <Tipo>02</Tipo>
+            <Numero>3102739999</Numero>
+        </Identificacion>
+        <NombreComercial>DELIVERY HERO COSTA RICA LIMITADA</NombreComercial>
+        <Ubicacion>
+            <Provincia>1</Provincia>
+            <Canton>02</Canton>
+            <Distrito>03</Distrito>
+            <Barrio>26</Barrio>
+            <OtrasSenas>Edificio Torre Mercedez - Paseo Colon San Jose Costa Rica - Piso 6 - San José</OtrasSenas>
+        </Ubicacion>
+        <CorreoElectronico>facturas.costarica@pedidosya.com</CorreoElectronico>
+    </Emisor>
+    <CondicionVenta>01</CondicionVenta>
+    <MedioPago>04</MedioPago>
+    <DetalleServicio>
+        <LineaDetalle>
+            <NumeroLinea>1</NumeroLinea>
+            <Codigo>6799000000000</Codigo>
+            <CodigoComercial>
+                <Tipo>01</Tipo>
+                <Codigo>DELIVERY-FEE-CR</Codigo>
+            </CodigoComercial>
+            <Cantidad>1.000</Cantidad>
+            <UnidadMedida>Sp</UnidadMedida>
+            <Detalle>Servicio Logistico</Detalle>
+            <PrecioUnitario>442.48</PrecioUnitario>
+            <MontoTotal>442.48</MontoTotal>
+            <SubTotal>442.48</SubTotal>
+            <Impuesto>
+                <Codigo>01</Codigo>
+                <CodigoTarifa>08</CodigoTarifa>
+                <Tarifa>13</Tarifa>
+                <Monto>57.52</Monto>
+            </Impuesto>
+            <MontoTotalLinea>500.00</MontoTotalLinea>
+        </LineaDetalle>
+        <LineaDetalle>
+            <NumeroLinea>2</NumeroLinea>
+            <Codigo>6799000000000</Codigo>
+            <CodigoComercial>
+                <Tipo>01</Tipo>
+                <Codigo>SERVICE-FEE-CR</Codigo>
+            </CodigoComercial>
+            <Cantidad>1.000</Cantidad>
+            <UnidadMedida>Sp</UnidadMedida>
+            <Detalle>Tarifa de servicio</Detalle>
+            <PrecioUnitario>106.19</PrecioUnitario>
+            <MontoTotal>106.19</MontoTotal>
+            <SubTotal>106.19</SubTotal>
+            <Impuesto>
+                <Codigo>01</Codigo>
+                <CodigoTarifa>08</CodigoTarifa>
+                <Tarifa>13</Tarifa>
+                <Monto>13.81</Monto>
+            </Impuesto>
+            <MontoTotalLinea>120.00</MontoTotalLinea>
+        </LineaDetalle>
+    </DetalleServicio>
+    <ResumenFactura>
+        <CodigoTipoMoneda>
+            <CodigoMoneda>CRC</CodigoMoneda>
+            <TipoCambio>1</TipoCambio>
+        </CodigoTipoMoneda>
+        <TotalServGravados>548.67</TotalServGravados>
+        <TotalServExentos>0.00</TotalServExentos>
+        <TotalServExonerado>0.00</TotalServExonerado>
+        <TotalMercanciasGravadas>0.00</TotalMercanciasGravadas>
+        <TotalMercanciasExentas>0.00</TotalMercanciasExentas>
+        <TotalMercExonerada>0.00</TotalMercExonerada>
+        <TotalGravado>548.67</TotalGravado>
+        <TotalExento>0.00</TotalExento>
+        <TotalExonerado>0.00</TotalExonerado>
+        <TotalVenta>548.67</TotalVenta>
+        <TotalDescuentos>0.00</TotalDescuentos>
+        <TotalVentaNeta>548.67</TotalVentaNeta>
+        <TotalImpuesto>71.33</TotalImpuesto>
+        <TotalComprobante>620.00</TotalComprobante>
+    </ResumenFactura>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+            <ds:Reference Id="Reference-9c014423-7cc3-47c0-93ec-ecaeba829689" URI="">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                <ds:DigestValue>SAb/WmJ6ehjJcVofhxTtWyfnAFiMFX8jUWT2CivTRxg=</ds:DigestValue>
+            </ds:Reference>
+            <ds:Reference Id="ReferenceKeyInfo" URI="#KeyInfoId-Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+                <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                <ds:DigestValue>vQWDd7sVdZ9KCexDUqbSsxuWHtm270d+Ta3UPnVxbRE=</ds:DigestValue>
+            </ds:Reference>
+            <ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+                <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                <ds:DigestValue>T6AfKNzagmWNEDG/h5FFQEtrixw=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue Id="SignatureValue-7e23ce71-c250-4354-b424-7a98b68e4d77">LsFJIbs/tU1YpWUQUc1hsYzugG+RzS/T+jznszY5zr4YkpytoRoDe25VCSqrHZJcRI2NJIbpy/9U4e8CphEB5zg+K9FHS3vA38VlGaZ2HlRqRTB33Vz09R1mv2R3ijWtKtGvbtzPXaNUL8uiRCGVQtEOWm40YQYFGeQYLMQvT+lxRH5nmNNqQ8qpJsrh/rL86+EQ8cAXtUdvemx1GR9Gs9Wwr4R8RQMVljkWVwqlelOgpMEW88WV3nyOLTGk2zCONzyRM2NdTMgWWtDAN8YoVK0eO5I1vblBDHTo9rVpCi1fEXoSTY+h26JtTvYF3H/T5mKL9g3dlKtUdcbeyzSJxw==</ds:SignatureValue>
+        <ds:KeyInfo Id="KeyInfoId-Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+            <ds:KeyValue>
+                <ds:RSAKeyValue>
+                    <ds:Modulus>qoWp+fTfti50sH323pR0kK5oE4TYQsisfXm/Udy7mXPuwtfPNT8XCIA4KE3Tdhj3UC6zdCFPJRLExNQNrX6Vn8kp5klEbH8TQGm+LYxlmlAx/e/FnptfrTIZQEHrR3UHHpyTBN3SYdRXsVYHsiZYb8Y+br3TDOhty3WJZH/+aEuJwaz4+fs/P7thxYr6NxaC7BB67BXHN8zKK7QJHO2Cm4CqVZrqQe1rmWUZQU7Srv4FufPMwwOhuu3TACz1EmEusUtmZ/xy3IBfWqDlerk5owlIoH/RvEQaAAXNM5M0BARPjHVH99Ha3stRoDC1gME/kNRpVJJfJwsJsuUybFSjew==</ds:Modulus>
+                    <ds:Exponent>AQAB</ds:Exponent>
+                </ds:RSAKeyValue>
+            </ds:KeyValue>
+            <ds:X509Data>
+                <ds:X509Certificate>MIIFIjCCAwqgAwIBAgIGAYGGa+3hMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYDVQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBFUlNPTkEgSlVSSURJQ0EwHhcNMjIwNjIxMTMyMDI5WhcNMjYwNjIwMTMyMDI5WjB9MRkwFwYDVQQFExBDUEotMy0xMDItNzM5OTk5MQswCQYDVQQGEwJDUjEZMBcGA1UECgwQUEVSU09OQSBKVVJJRElDQTEMMAoGA1UECwwDQ1BKMSowKAYDVQQDDCFERUxJVkVSWSBIRVJPIENPU1RBIFJJQ0EgTElNSVRBREEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCqhan59N+2LnSwffbelHSQrmgThNhCyKx9eb9R3LuZc+7C1881PxcIgDgoTdN2GPdQLrN0IU8lEsTE1A2tfpWfySnmSURsfxNAab4tjGWaUDH978Wem1+tMhlAQetHdQcenJME3dJh1FexVgeyJlhvxj5uvdMM6G3LdYlkf/5oS4nBrPj5+z8/u2HFivo3FoLsEHrsFcc3zMortAkc7YKbgKpVmupB7WuZZRlBTtKu/gW588zDA6G67dMALPUSYS6xS2Zn/HLcgF9aoOV6uTmjCUigf9G8RBoABc0zkzQEBE+MdUf30drey1GgMLWAwT+Q1GlUkl8nCwmy5TJsVKN7AgMBAAGjgcowgccwHwYDVR0jBBgwFoAUO21X9dZ86Z4QAiBB470azM+zTpUwHQYDVR0OBBYEFDP9s5B3WN5b7tl53LTyWYunCnHEMAsGA1UdDwQEAwIGwDATBgNVHSUEDDAKBggrBgEFBQcDBDBjBggrBgEFBQcBAQRXMFUwUwYIKwYBBQUHMAKGR2h0dHBzOi8vcGtpLmNvbXByb2JhbnRlc2VsZWN0cm9uaWNvcy5nby5jci9wcm9kL2ludGVybWVkaWF0ZS1wai1wZW0uY3J0MA0GCSqGSIb3DQEBCwUAA4ICAQAs76Gh40Id7BIaxJ4nfxzzFVPoV7rIgOad+ihzs/HxIOAjF5dyIzbmfJVNxKGZ+neoBYgFvjHQoouC5usgnrNUNkYmPGDBLj09xTR5FXYMMJJpnFigTUfIL6E+wmiCJiEdwBBSQ2jtijcDvTh20iX+/euES1oz/SNJYHFRGiZX8FSSVawuE1zgi8QICMmcU6FhltCWF7/B/ajzt2yxQQA/Q0iz/NWoIuQH9UxJr+Na6sdVaUbPKpdO8OR9ek6NRXlB3Mim0gwhyib/lI306iddj9/KY/kz9pKHUM5VgSopsur3/MI4N35EFVlJrPeiXoIJZYs0wm06enAsLDWUt3/Tif7IiF+7xg96zRghavmrbH/Oz3HXGteBEXALEhmc4ifQydmu905tqQw4LLmdgmJ0ubNez1mds/sZz31/ZV9DQNNUI/nzuJt8gC3d9oE81t3SuLtd4lSp5ISWntXZJV2CQe/d7AZpIUbuuM9To+hEt94xjQAr+nhmfHVN2g5O1eSY1FVXQf8cvXrymlaY6cfuOByrdvMjkHbco82XagwgqdVI3U1JKyAcY4Cq4aunVU8ZaTF4uJxm81gO8lX7RxqcnsYSmYJH/+zr+rxl6s5hMPzp1w7Vjb+zwEsUJ8f8grkcELECGgHYTBfQBIbzaBnTJsdc2IfEvHzJQoUzIwazvw==</ds:X509Certificate>
+            </ds:X509Data>
+        </ds:KeyInfo>
+        <ds:Object>
+            <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+                <xades:SignedProperties Id="SignedProperties-Signature-7e23ce71-c250-4354-b424-7a98b68e4d77">
+                    <xades:SignedSignatureProperties>
+                        <xades:SigningTime>2023-02-08T04:11:18.024Z</xades:SigningTime>
+                        <xades:SigningCertificate>
+                            <xades:Cert>
+                                <xades:CertDigest>
+                                    <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                                    <ds:DigestValue>pB3bWpjl3raZtkk75U/HB16G26s=</ds:DigestValue>
+                                </xades:CertDigest>
+                                <xades:IssuerSerial>
+                                    <ds:X509IssuerName>CN=CA PERSONA JURIDICA, OU=DGT, O=MINISTERIO DE HACIENDA, C=CR</ds:X509IssuerName>
+                                    <ds:X509SerialNumber>1655817629153</ds:X509SerialNumber>
+                                </xades:IssuerSerial>
+                            </xades:Cert>
+                        </xades:SigningCertificate>
+                        <xades:SignaturePolicyIdentifier>
+                            <xades:SignaturePolicyId>
+                                <xades:SigPolicyId>
+                                    <xades:Identifier>https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.1/Resolucion_Comprobantes_Electronicos_DGT-R-48-2016.pdf</xades:Identifier>
+                                </xades:SigPolicyId>
+                                <xades:SigPolicyHash>
+                                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                                    <ds:DigestValue>Ohixl6upD6av8N7pEvDABhEL6hM=</ds:DigestValue>
+                                </xades:SigPolicyHash>
+                            </xades:SignaturePolicyId>
+                        </xades:SignaturePolicyIdentifier>
+                        <xades:SignerRole>
+                            <xades:ClaimedRoles>
+                                <xades:ClaimedRole>emisor</xades:ClaimedRole>
+                            </xades:ClaimedRoles>
+                        </xades:SignerRole>
+                    </xades:SignedSignatureProperties>
+                </xades:SignedProperties>
+            </xades:QualifyingProperties>
+        </ds:Object>
+    </ds:Signature>
+
+    <Personalizados>
+        <campoString name="Version">4.3</campoString>
+        <campoString name="IntegracionGS">API REST</campoString>
+        <campoString name="TipoCE">04</campoString>
+        <campoString name="CorreosReceptor">clettersb@gmail.com</campoString>
+    </Personalizados>
+</TiqueteElectronico>

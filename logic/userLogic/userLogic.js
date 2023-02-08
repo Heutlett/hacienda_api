@@ -7,7 +7,12 @@ async function getUsuarios() {
 }
 
 async function getUsuarioByNombreUsuario(nombre_usuario){
-    return await userData.getUsuarioByNombreUsuario(nombre_usuario);
+    const user = await userData.getUsuarioByNombreUsuario(nombre_usuario);
+
+    if (user.length == 0)
+        return "El usuario " + nombre_usuario + " no se encuentra en la base de datoss." 
+
+    return user[0];
 }
 
 async function registrarUsuario(
@@ -21,9 +26,6 @@ async function registrarUsuario(
     return await userData.crearUsuario(
         nombre_usuario,
         password,
-        rol,
-        llavep12,
-        pinp12,
         correo
     );
 }

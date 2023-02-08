@@ -26,9 +26,6 @@ const registrarUsuario = async (req, res, next) => {
         let resp = await logic.registrarUsuario(
             req.body.nombre_usuario,
             req.body.password,
-            req.body.rol,
-            req.body.llavep12,
-            req.body.pinp12,
             req.body.correo
         );
 

@@ -15,12 +15,12 @@ async function getAllUsers() {
 
         const query = util.promisify(connection.query).bind(connection);
 
-        const sql_query = "select * from usuario;";
+        const sql_query = "call getAllUsers()";
 
         const resp = await (async () => {
             try {
                 const rows = await query(sql_query);
-                return rows;
+                return rows[0];
             } finally {
                 connection.end();
             }
@@ -35,9 +35,6 @@ async function getAllUsers() {
 async function crearUsuario(
     nombre_usuario,
     password,
-    rol,
-    llavep12,
-    pinp12,
     correo
 ) {
     try {
@@ -48,12 +45,12 @@ async function crearUsuario(
 
             const query = util.promisify(connection.query).bind(connection);
 
-            const sql_query = `INSERT INTO facturacion_db.usuario(rol,nombre_usuario,password,llaveP12,pinP12,correo) VALUES('${rol}','${nombre_usuario}','${password}','${llavep12}','${pinp12}','${correo}');`;
+            const sql_query = `call createUser('${nombre_usuario}','${password}','${correo}');`;
 
             const resp = await (async () => {
                 try {
                     await query(sql_query);
-                    return 1
+                    return 1; // Success, se ha registrado el usuario.
                 } finally {
                     connection.end();
                 }
@@ -61,8 +58,7 @@ async function crearUsuario(
 
             return resp;
         }
-        return 2 //Error, el nombre de usuario ya esta siendo utilizado
-
+        return 2; //Error, el nombre de usuario ya esta siendo utilizado.
     } catch (error) {
         throw new Error(error.message);
     }
@@ -74,12 +70,12 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
 
         const query = util.promisify(connection.query).bind(connection);
 
-        const sql_query = `select * from usuario where nombre_usuario = '${nombre_usuario}';`;
+        const sql_query = `call getUserByNombreUsuario("${nombre_usuario}");`;
 
         const resp = await (async () => {
             try {
                 const row = await query(sql_query);
-                return row;
+                return row[0];
             } finally {
                 connection.end();
             }
@@ -94,5 +90,5 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
 module.exports = {
     crearUsuario,
     getAllUsers,
-    getUsuarioByNombreUsuario
+    getUsuarioByNombreUsuario,
 };
