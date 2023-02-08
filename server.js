@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+
 const claveRoutes = require('./routes/claveRoutes/claveRoutes')
 const genXmlRoutes = require('./routes/genXmlRoutes/genXmlRoutes')
 const firmadorRoutes = require('./routes/firmadorRoutes/firmadorRoutes')
@@ -14,6 +15,8 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.use('/api',claveRoutes.routes);
 app.use('/api',genXmlRoutes.routes);

@@ -18,9 +18,6 @@ async function getUsuarioByNombreUsuario(nombre_usuario){
 async function registrarUsuario(
     nombre_usuario,
     password,
-    rol,
-    llavep12,
-    pinp12,
     correo
 ) {
     return await userData.crearUsuario(
@@ -30,8 +27,15 @@ async function registrarUsuario(
     );
 }
 
+async function subirLlaveUsuario(nombre_usuario, pinp12, llavep12){
+    
+    return await userData.subirLlavep12(nombre_usuario,pinp12,llavep12);
+
+}
+
 module.exports = {
     getUsuarios,
     registrarUsuario,
-    getUsuarioByNombreUsuario
+    getUsuarioByNombreUsuario,
+    subirLlaveUsuario
 };

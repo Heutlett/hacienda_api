@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FacturaElectronica xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica" xsi:schemaLocation="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica.xsd">
+    <Clave>50606022300060453034000100001010000000024111888547</Clave>
+    <CodigoActividad>722003</CodigoActividad>
+    <NumeroConsecutivo>00100001010000000024</NumeroConsecutivo>
+    <FechaEmision>2023-02-06T07:56:00-06:00</FechaEmision>
+    <Emisor>
+        <Nombre>CARLOS ADRIAN ARAYA RAMIREZ</Nombre>
+        <Identificacion>
+            <Tipo>01</Tipo>
+            <Numero>604530340</Numero>
+        </Identificacion>
+        <NombreComercial>ADRIAN ARAYA</NombreComercial>
+        <Ubicacion>
+            <Provincia>6</Provincia>
+            <Canton>08</Canton>
+            <Distrito>01</Distrito>
+            <Barrio>11</Barrio>
+            <OtrasSenas>PRIMERA ENTRADA SEGUNDA CASA A MANO IZQUIERDA</OtrasSenas>
+        </Ubicacion>
+        <Telefono>
+            <CodigoPais>506</CodigoPais>
+            <NumTelefono>88393511</NumTelefono>
+        </Telefono>
+        <CorreoElectronico>carlosadrian19921@gmail.com</CorreoElectronico>
+    </Emisor>
+    <Receptor>
+        <Nombre>CAJA COSTARRICENSE DEL SEGURO SOCIAL</Nombre>
+        <Identificacion>
+            <Tipo>02</Tipo>
+            <Numero>4000042147</Numero>
+        </Identificacion>
+        <Ubicacion>
+            <Provincia>6</Provincia>
+            <Canton>04</Canton>
+            <Distrito>01</Distrito>
+            <OtrasSenas>frente parquecito infantil, centro Miramar</OtrasSenas>
+        </Ubicacion>
+        <Telefono>
+            <CodigoPais>506</CodigoPais>
+            <NumTelefono>26399226</NumTelefono>
+        </Telefono>
+        <CorreoElectronico>suc_miramar@ccss.sa.cr</CorreoElectronico>
+    </Receptor>
+    <CondicionVenta>01</CondicionVenta>
+    <MedioPago>04</MedioPago>
+    <DetalleServicio>
+        <LineaDetalle>
+            <NumeroLinea>1</NumeroLinea>
+            <Codigo>7211200000300</Codigo>
+            <CodigoComercial>
+                <Tipo>01</Tipo>
+                <Codigo>01</Codigo>
+            </CodigoComercial>
+            <Cantidad>1.00</Cantidad>
+            <UnidadMedida>Alc</UnidadMedida>
+            <Detalle>Alquiler edificio Sucursal CCSS Miramar setiembre 2022</Detalle>
+            <PrecioUnitario>1050000.00</PrecioUnitario>
+            <MontoTotal>1050000.00</MontoTotal>
+            <SubTotal>1050000.00</SubTotal>
+            <Impuesto>
+                <Codigo>01</Codigo>
+                <CodigoTarifa>01</CodigoTarifa>
+                <Tarifa>0</Tarifa>
+                <Monto>0.00</Monto>
+            </Impuesto>
+            <ImpuestoNeto>0.00</ImpuestoNeto>
+            <MontoTotalLinea>1050000.00</MontoTotalLinea>
+        </LineaDetalle>
+    </DetalleServicio>
+    <ResumenFactura>
+        <CodigoTipoMoneda>
+            <CodigoMoneda>CRC</CodigoMoneda>
+            <TipoCambio>1</TipoCambio>
+        </CodigoTipoMoneda>
+        <TotalServGravados>1050000.00</TotalServGravados>
+        <TotalServExentos>0</TotalServExentos>
+        <TotalServExonerado>0</TotalServExonerado>
+        <TotalMercanciasGravadas>0</TotalMercanciasGravadas>
+        <TotalMercanciasExentas>0</TotalMercanciasExentas>
+        <TotalMercExonerada>0</TotalMercExonerada>
+        <TotalGravado>1050000.00</TotalGravado>
+        <TotalExento>0</TotalExento>
+        <TotalExonerado>0</TotalExonerado>
+        <TotalVenta>1050000.00</TotalVenta>
+        <TotalDescuentos>0</TotalDescuentos>
+        <TotalVentaNeta>1050000.00</TotalVentaNeta>
+        <TotalImpuesto>0</TotalImpuesto>
+        <TotalIVADevuelto>0</TotalIVADevuelto>
+        <TotalComprobante>1050000.00</TotalComprobante>
+    </ResumenFactura>
+<ds:Signature Id="Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="Reference-57f1dd10-2ca0-d306-d633-b2d9e8ad8801" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>8PqVn+ToLzTm0xWS9Kl+g0jAG+oj+sCtJQ7G0ao8Yrk=</ds:DigestValue></ds:Reference><ds:Reference Id="ReferenceKeyInfo" URI="#KeyInfoId-Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>1SsvxIEAlYaIEfTeMfh8d2WJbaALC4XUV1of5p9SYLU=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>sgcqMZkWarYy0vHpoXgryVII1CyBDldVnHA2/bmg/lc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SignatureValue-0e9eb6c5-e60c-8cd7-6a3f-0e67e0cf2c6d">PFUwKUDm3waq8jKtNFEA3lzd4Um3hxuX96rPYvHR29TbXacw4hFPEEPJ/ZF/19uEr/z/7UlU5gzvetq5lO7kFOnCILvh75tQiaus1MaeHxpFpPVTHVAWc2372/NpqOXvek/BlQmEeP0SX33rMVShHYU2BnvXbp+FH1TIKy/qRJCZ1G3yq3Rrb/uSWroxZwOevATZVq1p+OpjyRxFMRS+gi0DexfAoxNy09DvqSrvQIhRXZI7yS1YFDyNiOyU86360Og4jknxcqg1ZMR/0BwSBii5l8/8YWs88pngxqj9yGDezrQMeD3sv2XB/JBlGHG75R/Y1J3fPHhszN0r+gZ20A==</ds:SignatureValue><ds:KeyInfo Id="KeyInfoId-Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><ds:X509Data><ds:X509Certificate>MIIFXTCCA0WgAwIBAgIGAYXKZhFGMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNVBAYTAkNSMSkwJwYDVQQKDCBNSU5JU1RFUklPIERFIEhBQ0lFTkRBIC0gU0FOREJPWDEMMAoGA1UECwwDREdUMSQwIgYDVQQDDBtDQSBQRVJTT05BIEZJU0lDQSAtIFNBTkRCT1gwHhcNMjMwMTE5MTQxOTI0WhcNMjcwMTE4MTQxOTI0WjCBpTEZMBcGA1UEBRMQQ1BGLTA2LTA0NTMtMDM0MDEWMBQGA1UEBAwNQVJBWUEgUkFNSVJFWjEWMBQGA1UEKgwNQ0FSTE9TIEFEUklBTjELMAkGA1UEBhMCQ1IxFzAVBgNVBAoMDlBFUlNPTkEgRklTSUNBMQwwCgYDVQQLDANDUEYxJDAiBgNVBAMMG0NBUkxPUyBBRFJJQU4gQVJBWUEgUkFNSVJFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL6N5zDLJd8Op1hIxz7Gi/ONZWgFfQU9FoyzNzpuu5mG/DnyHTZ780Ip5cSAbTcUPwM5RTKBfHo2h+2HaTGpw2KAIYW9/VqACGwNySopHO8ZDSgAyHackgJfrQLyZ1nrnvnWJzNBnKZMxEsKauNus3JAtRqQz6CqF4AI8KrgOUQCZBPTRjdZNOzK4a76xFgxshrvSQStYK6lO1XX1rrFqZVtULHzPvAq9UUN/ICCnNYk3HS/bAX2pz/JFVPLXDIBfqBMoQr7qb0xgn0UwElQBgvetYTqc73sjabmmFofK4PXFz9BHyyKWACHk8WAfGytIlZaoCFcLtE5PTipHcS0fZkCAwEAAaOByjCBxzAfBgNVHSMEGDAWgBRGI9JET79XWSHkv5PVMJuVTOP3hzAdBgNVHQ4EFgQUg/s/8qi5DiEsR+ryGSexNcujP8UwCwYDVR0PBAQDAgbAMBMGA1UdJQQMMAoGCCsGAQUFBwMEMGMGCCsGAQUFBwEBBFcwVTBTBggrBgEFBQcwAoZHaHR0cHM6Ly9wa2kuY29tcHJvYmFudGVzZWxlY3Ryb25pY29zLmdvLmNyL3N0YWcvaW50ZXJtZWRpYXRlLXBmLXBlbS5jcnQwDQYJKoZIhvcNAQELBQADggIBAABBH8bzsC+f3Z0XrqXQ5dTgeLTV2ei3bjfYZVqsF7gKN1wyMfvGmkkDwst/ppsCLcL5qmnnvQW1QdRSt4oXS8yGq2BEYt9tGgXZAtiD8JRc016OF7Rb0cfkfbZNQOmmHr4vf9at5FTver7JY0luAenbgoSAQvUtlOHtMhei5KL+dN5t9ppcHun0qCqOh0qEGAi61JV3iQeEqEK5XGLJJcvyG8hiczvEG/CKppZYUNUFVEa/PW3zvjtUTp1SwHySyMuIUiMQ3eXj0MTGKaMI91b1XygApeelWYNH16ZkkmICT1qn73zMlo2vjQgJRaPKx8sTpn4tD295JSgsYvMgDNHc65jgGu3p5hw2GYTrpufzyuA5P3nOzccoqrS4oEAHgP4KTalL6ypkRrd89I9emgCiHImWFyyrXntCfCQfWcAHxcJdG/kQC0jtLrWCURAnP7vtcKzwxyQBYiT24Z3KcXoZEPi+0Er0x3gyv7z/qMJtdagMbpr1IIeeq/0rsgipJ/Pk24a8FAi1uhyAnolxugrdlt+NNdvTJP0+x77XbQ1GghGEnoVCkYQKH9lep4R2pFw91K+Aa6WGYeQ7dLpEkEP5yfAMrCT+mjjgcBFxVdcHnwDdlYEcYNuXEzoVW7/s+o5+S8wwIk/iSBa86pyGWf83P74UPlP55NXi3MAQhJ9t</ds:X509Certificate></ds:X509Data><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>vo3nMMsl3w6nWEjHPsaL841laAV9BT0WjLM3Om67mYb8OfIdNnvzQinlxIBtNxQ/AzlFMoF8ejaH7YdpManDYoAhhb39WoAIbA3JKikc7xkNKADIdpySAl+tAvJnWeue+dYnM0GcpkzESwpq426zckC1GpDPoKoXgAjwquA5RAJkE9NGN1k07MrhrvrEWDGyGu9JBK1grqU7VdfWusWplW1QsfM+8Cr1RQ38gIKc1iTcdL9sBfanP8kVU8tcMgF+oEyhCvupvTGCfRTASVAGC961hOpzveyNpuaYWh8rg9cXP0EfLIpYAIeTxYB8bK0iVlqgIVwu0Tk9OKkdxLR9mQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object Id="XadesObjectId-b80ed2bf-2588-efe3-1404-98814ddc25bd"><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Id="QualifyingProperties-ed4e3471-85ff-2e7e-5c54-0e72c968f9d0" Target="#Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><xades:SignedProperties Id="SignedProperties-Signature-0248d4e6-f74b-6a53-ce6c-55eee85faf04"><xades:SignedSignatureProperties><xades:SigningTime>2023-02-06T14:09:33-06:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Efe47iaZi5vP4NSO7aPQp8JcTNrwLN5O3gwVsUB3Y0E=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=CA PERSONA FISICA - SANDBOX, OU=DGT, O=MINISTERIO DE HACIENDA - SANDBOX, C=CR</ds:X509IssuerName><ds:X509SerialNumber>1674137964870</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://www.hacienda.go.cr/ATV/ComprobanteElectronico/docs/esquemas/2016/v4.3/ResolucionComprobantesElectronicosDGT-R-48-2016_4.3.pdf</xades:Identifier><xades:Description/></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>3gQCr0HYSdoxi0ZaRaJ4qs3mHfI=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-57f1dd10-2ca0-d306-d633-b2d9e8ad8801"><xades:MimeType>text/xml</xades:MimeType><xades:Encoding>UTF-8</xades:Encoding></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></FacturaElectronica>

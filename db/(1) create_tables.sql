@@ -1,4 +1,7 @@
+drop database `facturacion_db`;
 CREATE DATABASE `facturacion_db`;
+use `facturacion_db`;
+
 CREATE TABLE `usuario` (
     id INT AUTO_INCREMENT,
     rol INT NOT NULL,
@@ -20,8 +23,3 @@ CREATE TABLE `historial` (
     PRIMARY KEY(id),
     CONSTRAINT fk_usuario FOREIGN KEY(id_usuario) REFERENCES usuario(id)
 );
-CREATE VIEW view_users_low as
-select nombre_usuario,
-    rol,
-    correo
-from usuario

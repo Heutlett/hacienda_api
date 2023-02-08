@@ -13,7 +13,9 @@ const obtenerUsuarios = async (req, res, next) => {
 
 const obtenerUsuarioByNombreUsuario = async (req, res, next) => {
     try {
-        let resp = await logic.getUsuarioByNombreUsuario(req.body.nombre_usuario);
+        let resp = await logic.getUsuarioByNombreUsuario(
+            req.body.nombre_usuario
+        );
 
         res.status(200).send(resp);
     } catch (error) {
@@ -44,8 +46,21 @@ const registrarUsuario = async (req, res, next) => {
     }
 };
 
+const subirLlavep12 = async (req, res, next) => {
+    try {
+
+        const resp = await logic.subirLlaveUsuario(req.body.nombre_usuario,req.body.pinp12,req.file.buffer);
+
+        res.status(200).send(resp);
+
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+};
+
 module.exports = {
     obtenerUsuarios,
     registrarUsuario,
-    obtenerUsuarioByNombreUsuario
+    obtenerUsuarioByNombreUsuario,
+    subirLlavep12,
 };
