@@ -53,3 +53,15 @@ SET
 WHERE `nombre_usuario` = _nombre_usuario;
 
 END $ $ DELIMITER ;
+
+
+DELIMITER $ $ 
+CREATE PROCEDURE getPinp12(IN _nombre_usuario varchar(30)) BEGIN
+SELECT
+    (pinP12)
+FROM
+    facturacion_db.usuario
+where
+    nombre_usuario = _nombre_usuario;
+
+END $ $ DELIMITER ;

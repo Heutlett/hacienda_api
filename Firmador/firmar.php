@@ -3,15 +3,15 @@ require(dirname(__FILE__) . '/hacienda/firmador.php');
 
 use Hacienda\Firmador;
 
-// $pfx    = 'resources/llave.p12'; // Ruta del archivo de la llave criptográfica (*.p12)
-// $pin    = '8912'; // PIN de 4 dígitos de la llave criptográfica
-// $xml    = 'resources/unsignedFE.xml'; // String XML ó Ruta del archivo XML (comprobante electrónico)
+ //$pfx    = '../firmas_usuarios/adrian19921.p12'; // Ruta del archivo de la llave criptográfica (*.p12)
+ //$pin    = '8912'; // PIN de 4 dígitos de la llave criptográfica
+ //$xml    = '../Facturas_temp/prueba.xml'; // String XML ó Ruta del archivo XML (comprobante electrónico)
 // $ruta   = 'resources/signedFE.xml'; // Ruta del nuevo arhivo XML cuando se desea guardar en disco
 
 $pfx    = $argv[1]; // Ruta del archivo de la llave criptográfica (*.p12)
 $pin    = $argv[2]; // PIN de 4 dígitos de la llave criptográfica
 $xml    = $argv[3]; // String XML ó Ruta del archivo XML (comprobante electrónico)
-$ruta   = $argv[4]; // Ruta del nuevo arhivo XML cuando se desea guardar en disco
+//$ruta   = $argv[4]; // Ruta del nuevo arhivo XML cuando se desea guardar en disco
 
 // Nuevo firmador
 $firmador = new Firmador();
@@ -28,5 +28,5 @@ print_r($base64);
 
 
 // Se firma XML, se guarda en disco duro ($ruta) y se recibe el número de bytes del archivo guardado. En caso de error se recibe FALSE
-$archivo = $firmador->firmarXml($pfx, $pin, $xml, $firmador::TO_XML_FILE, $ruta);
+//$archivo = $firmador->firmarXml($pfx, $pin, $xml, $firmador::TO_XML_FILE, $ruta);
 //print_r($archivo);

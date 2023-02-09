@@ -110,10 +110,35 @@ async function subirLlavep12(nombre_usuario, pinp12) {
     }
 }
 
+async function getPinp12(nombre_usuario) {
+    try {
+        const connection = mysql.createConnection(config.sql);
+
+        const query = util.promisify(connection.query).bind(connection);
+
+        const sql_query = `call getPinp12("${nombre_usuario}");`;
+
+        const resp = await (async () => {
+            try {
+                const row = await query(sql_query);
+
+                return row[0][0].pinP12
+            } finally {
+                connection.end();
+            }
+        })();
+
+        return resp;
+    } catch (error) {
+        throw new Error(error.message);
+    }
+}
+
 
 module.exports = {
     crearUsuario,
     getAllUsers,
     getUsuarioByNombreUsuario,
-    subirLlavep12
+    subirLlavep12,
+    getPinp12
 };
