@@ -87,17 +87,13 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
 }
 
 
-async function subirLlavep12(nombre_usuario, pinp12, llavep12) {
+async function subirLlavep12(nombre_usuario, pinp12) {
     try {
         const connection = mysql.createConnection(config.sql);
 
         const query = util.promisify(connection.query).bind(connection);
 
-        const llavebase64 = llavep12.toString('base64')
-
-        //const llaveBuffer =  Buffer.from(llavebase64, 'base64');
-
-        const sql_query = `call subirLlaveUsuario("${nombre_usuario}", "${pinp12}", "${llavebase64}");`;
+        const sql_query = `call subirLlaveUsuario("${nombre_usuario}", "${pinp12}");`;
 
         const resp = await (async () => {
             try {

@@ -1,5 +1,6 @@
 "use strict";
 const userData = require("../../data/userData/userData");
+const utils = require("../utils/general")
 
 async function getUsuarios() {
 
@@ -28,9 +29,18 @@ async function registrarUsuario(
 }
 
 async function subirLlaveUsuario(nombre_usuario, pinp12, llavep12){
-    
-    return await userData.subirLlavep12(nombre_usuario,pinp12,llavep12);
 
+    const fileName = 'firmas_usuarios/' + nombre_usuario +  '.p12';
+
+    const result = await utils.writeFile(fileName, llavep12);
+
+    if(result)
+        return await userData.subirLlavep12(nombre_usuario,pinp12);
+    else{
+        
+        return result
+    }   
+        
 }
 
 module.exports = {
