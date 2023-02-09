@@ -7,7 +7,6 @@ CREATE TABLE `usuario` (
     rol INT NOT NULL,
     nombre_usuario VARCHAR(30),
     password VARCHAR(30),
-    llaveP12 VARCHAR(50000),
     pinP12 VARCHAR(10),
     correo VARCHAR(100),
     PRIMARY KEY(id)
