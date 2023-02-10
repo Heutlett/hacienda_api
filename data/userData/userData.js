@@ -31,11 +31,7 @@ async function getAllUsers() {
     }
 }
 
-async function crearUsuario(
-    nombre_usuario,
-    password,
-    correo
-) {
+async function crearUsuario(nombre_usuario, password, correo) {
     try {
         const user = await getUsuarioByNombreUsuario(nombre_usuario);
 
@@ -86,7 +82,6 @@ async function getUsuarioByNombreUsuario(nombre_usuario) {
     }
 }
 
-
 async function subirLlavep12(nombre_usuario, pinp12) {
     try {
         const connection = mysql.createConnection(config.sql);
@@ -112,33 +107,37 @@ async function subirLlavep12(nombre_usuario, pinp12) {
 
 async function getPinp12(nombre_usuario) {
     try {
-        const connection = mysql.createConnection(config.sql);
+        const user = await getUsuarioByNombreUsuario(nombre_usuario);
 
-        const query = util.promisify(connection.query).bind(connection);
+        if (user.length != 0) {
+            const connection = mysql.createConnection(config.sql);
 
-        const sql_query = `call getPinp12("${nombre_usuario}");`;
+            const query = util.promisify(connection.query).bind(connection);
 
-        const resp = await (async () => {
-            try {
-                const row = await query(sql_query);
+            const sql_query = `call getPinp12("${nombre_usuario}");`;
 
-                return row[0][0].pinP12
-            } finally {
-                connection.end();
-            }
-        })();
+            const resp = await (async () => {
+                try {
+                    const row = await query(sql_query);
 
-        return resp;
+                    return row[0][0].pinP12;
+                } finally {
+                    connection.end();
+                }
+            })();
+
+            return resp;
+        }
+        return -2; //Error, el usuario ingresado no existe.
     } catch (error) {
         throw new Error(error.message);
     }
 }
-
 
 module.exports = {
     crearUsuario,
     getAllUsers,
     getUsuarioByNombreUsuario,
     subirLlavep12,
-    getPinp12
+    getPinp12,
 };

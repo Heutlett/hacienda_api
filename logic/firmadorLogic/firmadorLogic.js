@@ -7,6 +7,10 @@ async function firmarFE(nombre_usuario, token, xmlbase64) {
     // Agregar validacion con token para poder obtener la llave
 
     const pinp12 = await userData.getPinp12(nombre_usuario);
+
+    if(pinp12 == -2)
+        return -2
+
     const routeLlavep12 = "firmas_usuarios/" + nombre_usuario + ".p12";
 
     const file_name = "Facturas_temp/" + nombre_usuario + ".xml";
