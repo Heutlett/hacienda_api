@@ -25,8 +25,6 @@ async function getToken(_client_id, _username, _password, _grant_type) {
             return "Ha ocurrido un error: " + err
         });
     
-    //console.log(result)
-    
 
     return result
 }

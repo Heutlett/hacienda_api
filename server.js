@@ -10,6 +10,8 @@ const genXmlRoutes = require('./routes/genXmlRoutes/genXmlRoutes')
 const firmadorRoutes = require('./routes/firmadorRoutes/firmadorRoutes')
 const atvTokenRoutes = require('./routes/atvTokenRoutes/atvTokenRoutes')
 const userRoutes = require('./routes/userRoutes/userRoutes')
+const envioRoutes = require('./routes/envioRoutes/envioRoutes')
+
 
 const app = express();
 
@@ -23,5 +25,6 @@ app.use('/api',genXmlRoutes.routes);
 app.use('/api',firmadorRoutes.routes);
 app.use('/api',atvTokenRoutes.routes);
 app.use('/api',userRoutes.routes);
+app.use('/api',envioRoutes.routes);
 
 module.exports = app;
