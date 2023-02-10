@@ -2,18 +2,21 @@ const axios = require("axios");
 const qs = require("querystring");
 
 async function consultarXml(clave, token) {
-    axios
+    
+    const result = await axios
         .get("https://api-sandbox.comprobanteselectronicos.go.cr/recepcion/v1/recepcion/"+clave, {
             headers: {
                 "Authorization": `Bearer ${token}`
             },
         })
         .then((res) => {
-            console.log(res.data);
+            return res.data;
         })
         .catch((error) => {
-            console.error(error);
+            return -1
         });
+
+    return result;
 }
 
 module.exports = { consultarXml };
