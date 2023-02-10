@@ -77,11 +77,11 @@ function validar_clave(codigo_pais, fecha, identif, consecutivo, situacion) {
     }
 
     if (error) {
-        console.log(msg);
-        return false;
+        //console.log(msg);
+        return {error:true, mensaje:msg};
     }
 
-    return true;
+    return {error:false, mensaje:msg};
 }
 
 function validar_consecutivo(sucursal, punto_venta, tipo, numeracion) {
@@ -134,11 +134,11 @@ function validar_consecutivo(sucursal, punto_venta, tipo, numeracion) {
     }
 
     if (error) {
-        console.log(msg);
-        return false;
+        //console.log(msg);
+        return {error:true, mensaje:msg};
     }
 
-    return true;
+    return {error:false, mensaje:msg};
 }
 
 function test_print_clave(
@@ -182,8 +182,11 @@ function test_print_consecutivo(sucursal, punto_venta, tipo, numeracion, consecu
 */
 
 function generar_consecutivo(sucursal, punto_venta, tipo, numeracion) {
-    if (!validar_consecutivo(sucursal, punto_venta, tipo, numeracion)) {
-        return;
+
+    const validacion = validar_consecutivo(sucursal, punto_venta, tipo, numeracion)
+
+    if (validacion.error) {
+        return validacion;
     }
 
     sucursal = shift_zeros(3, sucursal);
@@ -215,8 +218,11 @@ function generar_consecutivo(sucursal, punto_venta, tipo, numeracion) {
 */
 
 function generar_clave(codigo_pais, fecha, identif, consecutivo, situacion) {
-    if (!validar_clave(codigo_pais, fecha, identif, consecutivo, situacion)) {
-        return;
+
+    const validacion = validar_clave(codigo_pais, fecha, identif, consecutivo, situacion);
+
+    if (validacion.error) {
+        return validacion;
     }
 
     let codigo_seguridad = shift_zeros(8, randomRange(0, 99999999));

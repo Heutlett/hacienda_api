@@ -3,15 +3,16 @@ const logic = require("../../logic/claveLogic/claveLogic");
 
 const generarClaveConsecutivo = async (req, res, next) => {
     try {
-        let resp = await logic.generarClaveConsecutivo(
-            req.body.sucursal,
-            req.body.punto_venta,
-            req.body.tipo,
-            req.body.numeracion,
-            req.body.codigo_pais,
-            req.body.fecha,
-            req.body.identif,
-            req.body.situacion
+
+        const resp = await logic.generarClaveConsecutivo(
+            req.query.sucursal,
+            req.query.punto_venta,
+            req.query.tipo,
+            req.query.numeracion,
+            req.query.codigo_pais,
+            req.query.fecha,
+            req.query.identificacion,
+            req.query.situacion
         );
 
         res.status(200).send(resp);
@@ -22,11 +23,11 @@ const generarClaveConsecutivo = async (req, res, next) => {
 
 const generarConsecutivo = async (req, res, next) => {
     try {
-        let resp = await logic.generarConsecutivo(
-            req.body.sucursal,
-            req.body.punto_venta,
-            req.body.tipo,
-            req.body.numeracion
+        const resp = await logic.generarConsecutivo(
+            req.query.sucursal,
+            req.query.punto_venta,
+            req.query.tipo,
+            req.query.numeracion
         );
 
         res.status(200).send(resp);
@@ -37,12 +38,12 @@ const generarConsecutivo = async (req, res, next) => {
 
 const generarClave = async (req, res, next) => {
     try {
-        let resp = await logic.generarClave(
-            req.body.codigo_pais,
-            req.body.fecha,
-            req.body.identif,
-            req.body.situacion,
-            req.body.consecutivo
+        const resp = await logic.generarClave(
+            req.query.codigo_pais,
+            req.query.fecha,
+            req.query.identificacion,
+            req.query.situacion,
+            req.query.consecutivo
         );
 
         res.status(200).send(resp);

@@ -14,7 +14,7 @@ const obtenerUsuarios = async (req, res, next) => {
 const obtenerUsuarioByNombreUsuario = async (req, res, next) => {
     try {
         let resp = await logic.getUsuarioByNombreUsuario(
-            req.body.nombre_usuario
+            req.query.nombre_usuario
         );
 
         res.status(200).send(resp);
