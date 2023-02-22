@@ -16,7 +16,7 @@ grant_type = "password"
 sucursal = "1",
 punto_venta = "1"
 tipo = "1"
-numeracion = "58"
+numeracion = "62"
 codigo_pais = "506"
 identificacion = "604530340"
 situacion = "1"
@@ -238,7 +238,7 @@ if response.status_code == 200:
     data = response.json()
     accessToken = data["access_token"]
     print("\nSe ha generado el token correctamente:")
-    print(accessToken[0:10] + "...")
+    print(accessToken)
 else:
     print("\nLa solicitud GET generarToken ha fallado con código de estado:",
           response.status_code)
